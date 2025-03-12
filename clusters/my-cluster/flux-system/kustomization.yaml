@@ -4,4 +4,3 @@ namespace: monitoring
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-- ../apps/prometheus/
