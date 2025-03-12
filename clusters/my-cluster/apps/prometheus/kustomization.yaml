@@ -6,9 +6,7 @@ metadata:
   labels:
     kustomize.toolkit.fluxcd.io/name: prometheusm
     kustomize.toolkit.fluxcd.io/namespace: prometheus
-  name: flux-system
-  namespace: flux-system
-  resourceVersion: "1278759"
-  uid: 6cea470d-c8fd-4e98-93f9-94bfec8d8ef7
+  name: prometheus
+  namespace: prometheus
 resources:
 - "gitrepository.yaml"
