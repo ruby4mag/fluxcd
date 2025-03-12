@@ -1,12 +1,14 @@
-
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  annotations:
-  labels:
-    kustomize.toolkit.fluxcd.io/name: prometheusm
-    kustomize.toolkit.fluxcd.io/namespace: prometheus
   name: prometheus
-  namespace: prometheus
-resources:
-- "gitrepository.yaml"
+  namespace: flux-system  # 👈 Usually, Flux Kustomizations reside in `flux-system`
+spec:
+  interval: 10m
+  path: ./prometheus  # 👈 Ensure this is the correct directory inside your Git repo
+  prune: true
+  sourceRef:
+    kind: HelmRepository
+    name: prometheus  # 👈 Ensure this matches the GitRepository name
+  validation: client
+  timeout: 2m
