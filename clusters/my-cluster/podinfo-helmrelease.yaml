@@ -130,6 +130,6 @@ spec:
     tolerations: []
     topologySpreadConstraints: []
     ui:
-      color: '#34577c'
+      color: '#ff57ff'
       logo: ""
       message: ""
