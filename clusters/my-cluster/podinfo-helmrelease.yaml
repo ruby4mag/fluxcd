@@ -112,7 +112,7 @@ spec:
       httpPort: 9898
       metricsPort: 9797
       nodePort: 31198
-      type: ClusterIP
+      type: LoadBalancer
     serviceAccount:
       enabled: false
       imagePullSecrets: []
